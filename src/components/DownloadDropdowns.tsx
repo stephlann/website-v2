@@ -105,7 +105,7 @@ const DownloadDropdowns = ({updaterAction, marketplace, Table}) => {
                     </select>
                 </div>
                 <div className="input-group-prepend flex-colunm col-12 col-md-3">
-                    <label className="px-2 fw-bold" htmlFor="version">Version</label>
+                    <label className="px-2 fw-bold" htmlFor="version">Java Version</label>
                     <select id="version-filter" onChange={(e) => setVersion(e.target.value)} defaultValue={defaultVersion} className="form-select form-select-sm">
                         {versions.map(
                             (version, i): string | JSX.Element => version && (
