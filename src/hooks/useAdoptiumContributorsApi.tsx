@@ -117,12 +117,12 @@ async function fetchRandomContributor() {
         Math.floor(Math.random() * Math.floor(maxContributors)) + 1
       );
     }
-    const [randomPage, lastPage] = await getMaxContributors();
-
+    let [randomPage, lastPage] = await getMaxContributors();
     let contributor = await getContributor(randomPage);
-    // Should retry with next contributor, for now return null
-    if (excludedContributors.includes(contributor.login)) {
-      return null;
+
+    while (excludedContributors.includes(contributor.login)) {
+      [randomPage, lastPage] = await getMaxContributors();
+      contributor = await getContributor(randomPage);
     }
 
     if (window.localStorage) {
