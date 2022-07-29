@@ -48,10 +48,9 @@ following table:
 |Feature |Description
 |`FeatureMain` |Core Temurin installation (DEFAULT)
 
-|`FeatureEnvironment` |Update the PATH environment variable (DEFAULT)
+|`FeatureEnvironment` |Update the PATH environment variable
 
 |`FeatureJarFileRunWith` |Associate .jar files with Java applications
-(DEFAULT)
 
 |`FeatureJavaHome` |Update the JAVA_HOME environment variable
 
